@@ -14,6 +14,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'itchyny/lightline.vim'
+
+Plugin 'tomtom/tcomment_vim'
+
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -43,8 +51,8 @@ syntax on
 
 let mapleader = ','
 "map <Leader><Leader> <Plug>(easymotion-prefix)
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
+" nmap s <Plug>(easymotion-s2)
+" nmap t <Plug>(easymotion-t2)
 
 nmap / <Plug>(easymotion-sn)
 nmap n <Plug>(easymotion-next)
@@ -93,3 +101,37 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Folding
+nnoremap <Space> za
+vnoremap <Space> za
+
+" Quick yanking to the end of the line
+nnoremap Y y$
+
+nnoremap <leader>q :bd<CR>   " Quickly close the current buffer
+
+set title                       " change the terminal's title
+
+set nobackup                    " do not keep backup files, it's 70's style cluttering
+set noswapfile                  " do not write annoying intermediate swap files,
+                                "    who did ever restore from swap files anyway?
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+
+set hidden                      " hide buffers instead of closing them this
+                                "    means that the current buffer can be put
+                                "    to background without being written; and
+                                "    that marks and undo history are preserved
+set laststatus=2                " tell VIM to always put a status line in, even
+                                "    if there is only one window
+set cmdheight=2                 " use a status bar that is 2 rows high
+set clipboard=unnamed
+set showmatch
+set nowrap
+set showmode
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+vmap r "_dP       // it's a capital 'p' on the end
