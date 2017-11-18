@@ -20,7 +20,15 @@ Plugin 'itchyny/lightline.vim'
 
 Plugin 'tomtom/tcomment_vim'
 
+Plugin 'majutsushi/tagbar'
+
 Plugin 'airblade/vim-gitgutter'
+
+Plugin 'godlygeek/tabular'
+
+Plugin 'tpope/vim-surround'
+
+Plugin 'Townk/vim-autoclose'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -141,3 +149,11 @@ vmap r "_dP       // it's a capital 'p' on the end
 " let g:indent_guides_guide_size = 1
 " let g:indent_guides_color_change_percent = 3
 set ts=4 sw=4 noet
+
+map <Leader>a= :Tabularize /=<CR>
+map <Leader>a: :Tabularize /:<CR>
+map <Leader>a:: :Tabularize /:\zs<CR>
+map <Leader>a, :Tabularize /,<CR>
+map <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+nnoremap <silent> <leader>t :TagbarToggle<CR>
