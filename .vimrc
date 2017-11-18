@@ -22,6 +22,8 @@ Plugin 'tomtom/tcomment_vim'
 
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'nathanaelkane/vim-indent-guides'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -135,3 +137,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 vmap r "_dP       // it's a capital 'p' on the end
+
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_color_change_percent = 3
+set ts=4 sw=4 noet
