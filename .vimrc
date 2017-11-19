@@ -20,7 +20,9 @@ Plugin 'vim-scripts/a.vim'
 
 Plugin 'itchyny/lightline.vim'
 
-Plugin 'tomtom/tcomment_vim'
+"Plugin 'tomtom/tcomment_vim'
+
+Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'vim-syntastic/syntastic'
 
@@ -68,7 +70,7 @@ let mapleader = ','
 " nmap s <Plug>(easymotion-s2)
 " nmap t <Plug>(easymotion-t2)
 
-nmap / <Plug>(easymotion-sn)
+nmap ö <Plug>(easymotion-sn)
 nmap n <Plug>(easymotion-next)
 nmap N <Plug>(easymotion-prev)
 
@@ -171,4 +173,27 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 2
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
