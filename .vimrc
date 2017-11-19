@@ -16,9 +16,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'vim-scripts/a.vim'
+
 Plugin 'itchyny/lightline.vim'
 
 Plugin 'tomtom/tcomment_vim'
+
+Plugin 'vim-syntastic/syntastic'
 
 Plugin 'majutsushi/tagbar'
 
@@ -157,3 +161,14 @@ map <Leader>a, :Tabularize /,<CR>
 map <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 nnoremap <silent> <leader>t :TagbarToggle<CR>
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
