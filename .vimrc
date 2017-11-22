@@ -2,7 +2,6 @@
 set nocompatible
 filetype off
 
-imap jj <Esc>
 
 set relativenumber
 set number
@@ -197,3 +196,4 @@ let g:NERDTrimTrailingWhitespace = 1
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
+imap jj <Esc>
