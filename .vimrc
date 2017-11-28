@@ -200,3 +200,4 @@ inoremap jj <Esc>
 map <Leader>l :SyntasticToggleMode<Return>
 
 nmap <CR> o<Esc>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
