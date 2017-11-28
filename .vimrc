@@ -2,7 +2,6 @@
 set nocompatible
 filetype off
 
-
 set relativenumber
 set number
 
@@ -170,7 +169,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " Add spaces after comment delimiters by default
@@ -196,4 +195,8 @@ let g:NERDTrimTrailingWhitespace = 1
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
-imap jj <Esc>
+inoremap jj <Esc>
+
+map <Leader>l :SyntasticToggleMode<Return>
+
+nmap <CR> o<Esc>
